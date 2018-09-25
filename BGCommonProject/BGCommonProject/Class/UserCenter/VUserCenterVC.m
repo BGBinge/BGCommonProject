@@ -16,6 +16,26 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    
+    NSURL *url = [NSURL URLWithString:@"https://www.apiopen.top/weatherApi"];
+    NSDictionary *parametersDict = @{
+                                     @"city": @"成都"
+                                     };
+    
+    [BGNetWorking BG_postRequestWithURL:url param:parametersDict completeBlock:^(NSData *obj, id error) {
+        if (error)
+        {
+            NSError *er = (NSError *)error;
+            NSLog(@"error: %@",er.localizedDescription);
+        }
+        else
+        {
+            NSString *str = [[NSString alloc] initWithData:obj encoding:NSUTF8StringEncoding];
+            NSLog(@"data: %@",str);
+        }
+    }];
+
     // Do any additional setup after loading the view.
 }
 
@@ -23,15 +43,5 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

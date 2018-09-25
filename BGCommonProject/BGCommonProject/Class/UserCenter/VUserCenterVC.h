@@ -7,7 +7,10 @@
 //
 
 #import "BGBaseViewController.h"
+#import "BGNetWorking.h"
 
 @interface VUserCenterVC : BGBaseViewController
+
+
 
 @end

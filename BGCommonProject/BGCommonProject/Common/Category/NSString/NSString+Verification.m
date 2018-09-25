@@ -8,6 +8,7 @@
 
 #import "NSString+Verification.h"
 
+// 字符串验证
 @implementation NSString (Verification)
 
 

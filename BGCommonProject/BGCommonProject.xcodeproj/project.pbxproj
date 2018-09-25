@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		77131DAF2153960D006C125F /* NSTimer+GCDLoad.m in Sources */ = {isa = PBXBuildFile; fileRef = 77131DAE2153960D006C125F /* NSTimer+GCDLoad.m */; };
+		774ADEE5215A583300194D9E /* NSString+BGNetWorking.m in Sources */ = {isa = PBXBuildFile; fileRef = 774ADEE2215A583300194D9E /* NSString+BGNetWorking.m */; };
+		774ADEE6215A583300194D9E /* BGNetWorking.m in Sources */ = {isa = PBXBuildFile; fileRef = 774ADEE3215A583300194D9E /* BGNetWorking.m */; };
 		779B0A8F215233E7002A3D01 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 779B0A8E215233E7002A3D01 /* AppDelegate.m */; };
 		779B0A92215233E7002A3D01 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 779B0A91215233E7002A3D01 /* ViewController.m */; };
 		779B0A95215233E7002A3D01 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 779B0A93215233E7002A3D01 /* Main.storyboard */; };
@@ -45,6 +48,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		77131DAD2153960D006C125F /* NSTimer+GCDLoad.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSTimer+GCDLoad.h"; sourceTree = "<group>"; };
+		77131DAE2153960D006C125F /* NSTimer+GCDLoad.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+GCDLoad.m"; sourceTree = "<group>"; };
+		774ADEE1215A583300194D9E /* NSString+BGNetWorking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+BGNetWorking.h"; sourceTree = "<group>"; };
+		774ADEE2215A583300194D9E /* NSString+BGNetWorking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+BGNetWorking.m"; sourceTree = "<group>"; };
+		774ADEE3215A583300194D9E /* BGNetWorking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGNetWorking.m; sourceTree = "<group>"; };
+		774ADEE4215A583300194D9E /* BGNetWorking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGNetWorking.h; sourceTree = "<group>"; };
 		779B0A8A215233E7002A3D01 /* BGCommonProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BGCommonProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		779B0A8D215233E7002A3D01 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		779B0A8E215233E7002A3D01 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -108,6 +117,58 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		77131DA92153917F006C125F /* Lib(功能) */ = {
+			isa = PBXGroup;
+			children = (
+				774ADEDF215A583300194D9E /* BGNetWorking */,
+				77131DAA2153919A006C125F /* Custom(自定义功能) */,
+			);
+			path = "Lib(功能)";
+			sourceTree = "<group>";
+		};
+		77131DAA2153919A006C125F /* Custom(自定义功能) */ = {
+			isa = PBXGroup;
+			children = (
+				77131DAB2153921A006C125F /* BGGCDTimer(计时器) */,
+			);
+			path = "Custom(自定义功能)";
+			sourceTree = "<group>";
+		};
+		77131DAB2153921A006C125F /* BGGCDTimer(计时器) */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "BGGCDTimer(计时器)";
+			sourceTree = "<group>";
+		};
+		77131DAC215395AF006C125F /* NSTimer */ = {
+			isa = PBXGroup;
+			children = (
+				77131DAD2153960D006C125F /* NSTimer+GCDLoad.h */,
+				77131DAE2153960D006C125F /* NSTimer+GCDLoad.m */,
+			);
+			path = NSTimer;
+			sourceTree = "<group>";
+		};
+		774ADEDF215A583300194D9E /* BGNetWorking */ = {
+			isa = PBXGroup;
+			children = (
+				774ADEE4215A583300194D9E /* BGNetWorking.h */,
+				774ADEE3215A583300194D9E /* BGNetWorking.m */,
+				774ADEE0215A583300194D9E /* Category */,
+			);
+			path = BGNetWorking;
+			sourceTree = "<group>";
+		};
+		774ADEE0215A583300194D9E /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				774ADEE1215A583300194D9E /* NSString+BGNetWorking.h */,
+				774ADEE2215A583300194D9E /* NSString+BGNetWorking.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
 		779B0A81215233E7002A3D01 = {
 			isa = PBXGroup;
 			children = (
@@ -176,24 +237,25 @@
 		779B0AC0215234A4002A3D01 /* 模块 */ = {
 			isa = PBXGroup;
 			children = (
-				779B0AC1215234A4002A3D01 /* NSString */,
+				779B0AC1215234A4002A3D01 /* NSString演示 */,
 			);
 			path = "模块";
 			sourceTree = "<group>";
 		};
-		779B0AC1215234A4002A3D01 /* NSString */ = {
+		779B0AC1215234A4002A3D01 /* NSString演示 */ = {
 			isa = PBXGroup;
 			children = (
 				779B0AC2215234A4002A3D01 /* NSStringVerificationVC.h */,
 				779B0AC3215234A4002A3D01 /* NSStringVerificationVC.m */,
 				779B0AC4215234A4002A3D01 /* NSStringVerificationVC.xib */,
 			);
-			path = NSString;
+			path = "NSString演示";
 			sourceTree = "<group>";
 		};
 		779B0AC5215234A4002A3D01 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				77131DA92153917F006C125F /* Lib(功能) */,
 				779B0AC6215234A4002A3D01 /* Category */,
 				779B0ACA215234A4002A3D01 /* Base */,
 				779B0ACD215234A4002A3D01 /* BGPrefixHeader.pch */,
@@ -204,6 +266,7 @@
 		779B0AC6215234A4002A3D01 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				77131DAC215395AF006C125F /* NSTimer */,
 				779B0AC7215234A4002A3D01 /* NSString */,
 			);
 			path = Category;
@@ -251,8 +314,8 @@
 		779B0AD2215234A5002A3D01 /* Chat */ = {
 			isa = PBXGroup;
 			children = (
-				779B0AD3215234A5002A3D01 /* VChatVC.m */,
 				779B0AD4215234A5002A3D01 /* VChatVC.h */,
+				779B0AD3215234A5002A3D01 /* VChatVC.m */,
 			);
 			path = Chat;
 			sourceTree = "<group>";
@@ -260,8 +323,8 @@
 		779B0AD5215234A5002A3D01 /* UserCenter */ = {
 			isa = PBXGroup;
 			children = (
-				779B0AD6215234A5002A3D01 /* VUserCenterVC.m */,
 				779B0AD7215234A5002A3D01 /* VUserCenterVC.h */,
+				779B0AD6215234A5002A3D01 /* VUserCenterVC.m */,
 			);
 			path = UserCenter;
 			sourceTree = "<group>";
@@ -421,13 +484,16 @@
 				779B0AE2215234A5002A3D01 /* NSString+Verification.m in Sources */,
 				779B0AE7215234A5002A3D01 /* VFindVC.m in Sources */,
 				779B0AE4215234A5002A3D01 /* VHomeVC.m in Sources */,
+				774ADEE6215A583300194D9E /* BGNetWorking.m in Sources */,
 				779B0AE9215234A5002A3D01 /* BGTabBarController.m in Sources */,
 				779B0AE5215234A5002A3D01 /* VChatVC.m in Sources */,
 				779B0AE8215234A5002A3D01 /* BGTabBar.m in Sources */,
 				779B0A9D215233E8002A3D01 /* main.m in Sources */,
 				779B0AE6215234A5002A3D01 /* VUserCenterVC.m in Sources */,
+				77131DAF2153960D006C125F /* NSTimer+GCDLoad.m in Sources */,
 				779B0A8F215233E7002A3D01 /* AppDelegate.m in Sources */,
 				779B0AE3215234A5002A3D01 /* BGBaseViewController.m in Sources */,
+				774ADEE5215A583300194D9E /* NSString+BGNetWorking.m in Sources */,
 				779B0AE0215234A5002A3D01 /* NSStringVerificationVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

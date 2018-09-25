@@ -8,6 +8,7 @@
 
 #import "NSStringVerificationVC.h"
 #import "NSString+Verification.h"
+#import "NSTimer+GCDLoad.h"
 
 @interface NSStringVerificationVC ()<UITextFieldDelegate>
 
@@ -98,10 +99,6 @@
         }
         
         
-        
-        
-        
-        
     }
 }
 
@@ -109,9 +106,57 @@
 #pragma mark - UITextFieldDelegate
 -(BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
 {
+    
+    [NSTimer doTask:^{
+//        NSLog(@"时间戳5：%@", [self getNowTimeTimestamp]);
+    } start:0.0000003 interval:1.0000001 repeats:YES async:YES];
+
     [self performSelector:@selector(setLabelColor:) withObject:textField afterDelay:0.3];
     return YES;
 }
+
+
+
+
+-(NSString *)getNowTimeTimestamp{
+    
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init] ;
+    
+    [formatter setDateStyle:NSDateFormatterMediumStyle];
+    
+    [formatter setTimeStyle:NSDateFormatterShortStyle];
+    
+    [formatter setDateFormat:@"YYYY-MM-dd HH:mm:ss SSSSSSS"]; // ----------设置你想要的格式,hh与HH的区别:分别表示12小时制,24小时制
+    
+    //设置时区,这个对于时间的处理有时很重要
+    
+    NSTimeZone* timeZone = [NSTimeZone timeZoneWithName:@"Asia/Shanghai"];
+    
+    [formatter setTimeZone:timeZone];
+    
+    NSDate *datenow = [NSDate date];//现在时间,你可以输出来看下是什么格式
+    
+    NSString *timeSp = [NSString stringWithFormat:@"%ld", (long)([datenow timeIntervalSince1970]*1000000.0)];
+    
+    return timeSp;
+}
+
+-(NSString *)getNowTimeTimestamp2{
+    
+    
+    
+    NSDate* dat = [NSDate dateWithTimeIntervalSinceNow:0];
+    
+    NSTimeInterval a=[dat timeIntervalSince1970];
+    
+    NSString*timeString = [NSString stringWithFormat:@"%0.f", a];//转为字符型
+    
+    ;
+    
+    return timeString;
+    
+}
+
 
 
 
