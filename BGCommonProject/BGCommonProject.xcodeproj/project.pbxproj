@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		77131DAF2153960D006C125F /* NSTimer+GCDLoad.m in Sources */ = {isa = PBXBuildFile; fileRef = 77131DAE2153960D006C125F /* NSTimer+GCDLoad.m */; };
 		774ADEE5215A583300194D9E /* NSString+BGNetWorking.m in Sources */ = {isa = PBXBuildFile; fileRef = 774ADEE2215A583300194D9E /* NSString+BGNetWorking.m */; };
 		774ADEE6215A583300194D9E /* BGNetWorking.m in Sources */ = {isa = PBXBuildFile; fileRef = 774ADEE3215A583300194D9E /* BGNetWorking.m */; };
+		774ADFE6215B722400194D9E /* BGGCDTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 774ADFE5215B722400194D9E /* BGGCDTimer.m */; };
+		774ADFEB215B8CFF00194D9E /* BGGCDTimerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 774ADFE9215B8CFF00194D9E /* BGGCDTimerVC.m */; };
+		774ADFEC215B8CFF00194D9E /* BGGCDTimerVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 774ADFEA215B8CFF00194D9E /* BGGCDTimerVC.xib */; };
 		779B0A8F215233E7002A3D01 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 779B0A8E215233E7002A3D01 /* AppDelegate.m */; };
 		779B0A92215233E7002A3D01 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 779B0A91215233E7002A3D01 /* ViewController.m */; };
 		779B0A95215233E7002A3D01 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 779B0A93215233E7002A3D01 /* Main.storyboard */; };
@@ -48,12 +50,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		77131DAD2153960D006C125F /* NSTimer+GCDLoad.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSTimer+GCDLoad.h"; sourceTree = "<group>"; };
-		77131DAE2153960D006C125F /* NSTimer+GCDLoad.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+GCDLoad.m"; sourceTree = "<group>"; };
 		774ADEE1215A583300194D9E /* NSString+BGNetWorking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+BGNetWorking.h"; sourceTree = "<group>"; };
 		774ADEE2215A583300194D9E /* NSString+BGNetWorking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+BGNetWorking.m"; sourceTree = "<group>"; };
 		774ADEE3215A583300194D9E /* BGNetWorking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGNetWorking.m; sourceTree = "<group>"; };
 		774ADEE4215A583300194D9E /* BGNetWorking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGNetWorking.h; sourceTree = "<group>"; };
+		774ADFE4215B722400194D9E /* BGGCDTimer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BGGCDTimer.h; sourceTree = "<group>"; };
+		774ADFE5215B722400194D9E /* BGGCDTimer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BGGCDTimer.m; sourceTree = "<group>"; };
+		774ADFE8215B8CFF00194D9E /* BGGCDTimerVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BGGCDTimerVC.h; sourceTree = "<group>"; };
+		774ADFE9215B8CFF00194D9E /* BGGCDTimerVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BGGCDTimerVC.m; sourceTree = "<group>"; };
+		774ADFEA215B8CFF00194D9E /* BGGCDTimerVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BGGCDTimerVC.xib; sourceTree = "<group>"; };
 		779B0A8A215233E7002A3D01 /* BGCommonProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BGCommonProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		779B0A8D215233E7002A3D01 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		779B0A8E215233E7002A3D01 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -120,7 +125,6 @@
 		77131DA92153917F006C125F /* Lib(功能) */ = {
 			isa = PBXGroup;
 			children = (
-				774ADEDF215A583300194D9E /* BGNetWorking */,
 				77131DAA2153919A006C125F /* Custom(自定义功能) */,
 			);
 			path = "Lib(功能)";
@@ -129,6 +133,7 @@
 		77131DAA2153919A006C125F /* Custom(自定义功能) */ = {
 			isa = PBXGroup;
 			children = (
+				774ADEDF215A583300194D9E /* BGNetWorking */,
 				77131DAB2153921A006C125F /* BGGCDTimer(计时器) */,
 			);
 			path = "Custom(自定义功能)";
@@ -137,6 +142,8 @@
 		77131DAB2153921A006C125F /* BGGCDTimer(计时器) */ = {
 			isa = PBXGroup;
 			children = (
+				774ADFE4215B722400194D9E /* BGGCDTimer.h */,
+				774ADFE5215B722400194D9E /* BGGCDTimer.m */,
 			);
 			path = "BGGCDTimer(计时器)";
 			sourceTree = "<group>";
@@ -144,8 +151,6 @@
 		77131DAC215395AF006C125F /* NSTimer */ = {
 			isa = PBXGroup;
 			children = (
-				77131DAD2153960D006C125F /* NSTimer+GCDLoad.h */,
-				77131DAE2153960D006C125F /* NSTimer+GCDLoad.m */,
 			);
 			path = NSTimer;
 			sourceTree = "<group>";
@@ -167,6 +172,16 @@
 				774ADEE2215A583300194D9E /* NSString+BGNetWorking.m */,
 			);
 			path = Category;
+			sourceTree = "<group>";
+		};
+		774ADFE7215B8C9200194D9E /* 计时器 */ = {
+			isa = PBXGroup;
+			children = (
+				774ADFE8215B8CFF00194D9E /* BGGCDTimerVC.h */,
+				774ADFE9215B8CFF00194D9E /* BGGCDTimerVC.m */,
+				774ADFEA215B8CFF00194D9E /* BGGCDTimerVC.xib */,
+			);
+			path = "计时器";
 			sourceTree = "<group>";
 		};
 		779B0A81215233E7002A3D01 = {
@@ -237,6 +252,7 @@
 		779B0AC0215234A4002A3D01 /* 模块 */ = {
 			isa = PBXGroup;
 			children = (
+				774ADFE7215B8C9200194D9E /* 计时器 */,
 				779B0AC1215234A4002A3D01 /* NSString演示 */,
 			);
 			path = "模块";
@@ -342,9 +358,9 @@
 			isa = PBXGroup;
 			children = (
 				779B0ADC215234A5002A3D01 /* BGTabBarController.h */,
-				779B0ADD215234A5002A3D01 /* BGTabBar.m */,
-				779B0ADE215234A5002A3D01 /* BGTabBar.h */,
 				779B0ADF215234A5002A3D01 /* BGTabBarController.m */,
+				779B0ADE215234A5002A3D01 /* BGTabBar.h */,
+				779B0ADD215234A5002A3D01 /* BGTabBar.m */,
 			);
 			path = BGTabBarController;
 			sourceTree = "<group>";
@@ -453,6 +469,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				779B0A9A215233E8002A3D01 /* LaunchScreen.storyboard in Resources */,
+				774ADFEC215B8CFF00194D9E /* BGGCDTimerVC.xib in Resources */,
 				779B0A97215233E8002A3D01 /* Assets.xcassets in Resources */,
 				779B0A95215233E7002A3D01 /* Main.storyboard in Resources */,
 				779B0AE1215234A5002A3D01 /* NSStringVerificationVC.xib in Resources */,
@@ -490,11 +507,12 @@
 				779B0AE8215234A5002A3D01 /* BGTabBar.m in Sources */,
 				779B0A9D215233E8002A3D01 /* main.m in Sources */,
 				779B0AE6215234A5002A3D01 /* VUserCenterVC.m in Sources */,
-				77131DAF2153960D006C125F /* NSTimer+GCDLoad.m in Sources */,
+				774ADFEB215B8CFF00194D9E /* BGGCDTimerVC.m in Sources */,
 				779B0A8F215233E7002A3D01 /* AppDelegate.m in Sources */,
 				779B0AE3215234A5002A3D01 /* BGBaseViewController.m in Sources */,
 				774ADEE5215A583300194D9E /* NSString+BGNetWorking.m in Sources */,
 				779B0AE0215234A5002A3D01 /* NSStringVerificationVC.m in Sources */,
+				774ADFE6215B722400194D9E /* BGGCDTimer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

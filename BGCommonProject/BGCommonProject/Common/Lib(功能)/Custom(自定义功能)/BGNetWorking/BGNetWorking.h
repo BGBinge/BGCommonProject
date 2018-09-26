@@ -56,5 +56,5 @@ typedef NS_ENUM(NSInteger, BGRequestType)
  @param configuration 配置（请求头，超时时间也可以在这里设置）
  @param completeBlock 完成请求
  */
-+(void)startRequestWithURL:(NSURL *)URL param:(NSDictionary *)param type:(BGRequestType)type outTime:(NSTimeInterval)outTime cachePolicy:(NSURLRequestCachePolicy)cachePolicy requwstHead:(NSDictionary *)requwstHead configuration:(NSURLSessionConfiguration *)configuration completeBlock:(CompleteBlock)completeBlock;
++(void)BG_startRequestWithURL:(NSURL *)URL param:(NSDictionary *)param type:(BGRequestType)type outTime:(NSTimeInterval)outTime cachePolicy:(NSURLRequestCachePolicy)cachePolicy requwstHead:(NSDictionary *)requwstHead configuration:(NSURLSessionConfiguration *)configuration completeBlock:(CompleteBlock)completeBlock;
 @end
