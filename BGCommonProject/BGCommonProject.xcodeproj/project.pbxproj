@@ -30,6 +30,9 @@
 		779B0AE7215234A5002A3D01 /* VFindVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 779B0AD9215234A5002A3D01 /* VFindVC.m */; };
 		779B0AE8215234A5002A3D01 /* BGTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 779B0ADD215234A5002A3D01 /* BGTabBar.m */; };
 		779B0AE9215234A5002A3D01 /* BGTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 779B0ADF215234A5002A3D01 /* BGTabBarController.m */; };
+		77BD68812164F0BD00D4D6E6 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 77BD68802164F0BD00D4D6E6 /* UIView+Frame.m */; };
+		77BD68892164F9B400D4D6E6 /* ViewFrameVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 77BD68872164F9B400D4D6E6 /* ViewFrameVC.m */; };
+		77BD688A2164F9B400D4D6E6 /* ViewFrameVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77BD68882164F9B400D4D6E6 /* ViewFrameVC.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +98,11 @@
 		779B0ADD215234A5002A3D01 /* BGTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGTabBar.m; sourceTree = "<group>"; };
 		779B0ADE215234A5002A3D01 /* BGTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGTabBar.h; sourceTree = "<group>"; };
 		779B0ADF215234A5002A3D01 /* BGTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGTabBarController.m; sourceTree = "<group>"; };
+		77BD687F2164F0BD00D4D6E6 /* UIView+Frame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
+		77BD68802164F0BD00D4D6E6 /* UIView+Frame.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
+		77BD68862164F9B400D4D6E6 /* ViewFrameVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewFrameVC.h; sourceTree = "<group>"; };
+		77BD68872164F9B400D4D6E6 /* ViewFrameVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewFrameVC.m; sourceTree = "<group>"; };
+		77BD68882164F9B400D4D6E6 /* ViewFrameVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewFrameVC.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -252,6 +260,7 @@
 		779B0AC0215234A4002A3D01 /* 模块 */ = {
 			isa = PBXGroup;
 			children = (
+				77BD68822164F8D500D4D6E6 /* 控件frame相关演示 */,
 				774ADFE7215B8C9200194D9E /* 计时器 */,
 				779B0AC1215234A4002A3D01 /* NSString演示 */,
 			);
@@ -282,6 +291,7 @@
 		779B0AC6215234A4002A3D01 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				77BD687E2164F07D00D4D6E6 /* UIView */,
 				77131DAC215395AF006C125F /* NSTimer */,
 				779B0AC7215234A4002A3D01 /* NSString */,
 			);
@@ -363,6 +373,25 @@
 				779B0ADD215234A5002A3D01 /* BGTabBar.m */,
 			);
 			path = BGTabBarController;
+			sourceTree = "<group>";
+		};
+		77BD687E2164F07D00D4D6E6 /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				77BD687F2164F0BD00D4D6E6 /* UIView+Frame.h */,
+				77BD68802164F0BD00D4D6E6 /* UIView+Frame.m */,
+			);
+			path = UIView;
+			sourceTree = "<group>";
+		};
+		77BD68822164F8D500D4D6E6 /* 控件frame相关演示 */ = {
+			isa = PBXGroup;
+			children = (
+				77BD68862164F9B400D4D6E6 /* ViewFrameVC.h */,
+				77BD68872164F9B400D4D6E6 /* ViewFrameVC.m */,
+				77BD68882164F9B400D4D6E6 /* ViewFrameVC.xib */,
+			);
+			path = "控件frame相关演示";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -471,6 +500,7 @@
 				779B0A9A215233E8002A3D01 /* LaunchScreen.storyboard in Resources */,
 				774ADFEC215B8CFF00194D9E /* BGGCDTimerVC.xib in Resources */,
 				779B0A97215233E8002A3D01 /* Assets.xcassets in Resources */,
+				77BD688A2164F9B400D4D6E6 /* ViewFrameVC.xib in Resources */,
 				779B0A95215233E7002A3D01 /* Main.storyboard in Resources */,
 				779B0AE1215234A5002A3D01 /* NSStringVerificationVC.xib in Resources */,
 			);
@@ -506,11 +536,13 @@
 				779B0AE5215234A5002A3D01 /* VChatVC.m in Sources */,
 				779B0AE8215234A5002A3D01 /* BGTabBar.m in Sources */,
 				779B0A9D215233E8002A3D01 /* main.m in Sources */,
+				77BD68892164F9B400D4D6E6 /* ViewFrameVC.m in Sources */,
 				779B0AE6215234A5002A3D01 /* VUserCenterVC.m in Sources */,
 				774ADFEB215B8CFF00194D9E /* BGGCDTimerVC.m in Sources */,
 				779B0A8F215233E7002A3D01 /* AppDelegate.m in Sources */,
 				779B0AE3215234A5002A3D01 /* BGBaseViewController.m in Sources */,
 				774ADEE5215A583300194D9E /* NSString+BGNetWorking.m in Sources */,
+				77BD68812164F0BD00D4D6E6 /* UIView+Frame.m in Sources */,
 				779B0AE0215234A5002A3D01 /* NSStringVerificationVC.m in Sources */,
 				774ADFE6215B722400194D9E /* BGGCDTimer.m in Sources */,
 			);

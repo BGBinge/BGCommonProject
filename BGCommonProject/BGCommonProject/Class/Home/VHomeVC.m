@@ -9,6 +9,7 @@
 #import "VHomeVC.h"
 #import "NSStringVerificationVC.h"
 #import "BGGCDTimerVC.h"
+#import "ViewFrameVC.h"
 
 @interface VHomeVC ()<UITableViewDelegate, UITableViewDataSource>
 
@@ -48,7 +49,8 @@
     {
         _dataAry = @[
                      @"字符串验证",
-                     @"计时器"
+                     @"计时器",
+                     @"UIView+Frame"
                      ];
     }
     return _dataAry;
@@ -104,7 +106,7 @@
             break;
         case 2:
         {
-            BGGCDTimerVC *vc = [[BGGCDTimerVC alloc] init];
+            ViewFrameVC *vc = [[ViewFrameVC alloc] init];
             vc.hidesBottomBarWhenPushed = YES;
             [self.navigationController pushViewController:vc animated:YES];
         }
