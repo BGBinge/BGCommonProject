@@ -16,15 +16,29 @@
  
  @return 编码后的字符串
  */
--(NSString *)BGNet_urlEncoding
+//-(NSString *)BGNet_urlEncoding
+//{
+//    NSString *encodedString = (NSString *)CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes(kCFAllocatorDefault,
+//                                                                                                     (CFStringRef)self,
+//                                                                                                     (CFStringRef)@"!$&'()*+,-./:;=?@_~%#[]",
+//                                                                                                     NULL,
+//                                                                                                     kCFStringEncodingUTF8));
+//    return encodedString;
+//    
+//}
+
+
+/**
+ 参数字典中汉字与特殊字符处理
+ 
+ @return 编码后的字符串
+ */
+-(NSString *)BGNet_paramEncoding
 {
-    NSString *encodedString = (NSString *)CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes(kCFAllocatorDefault,
-                                                                                                     (CFStringRef)self,
-                                                                                                     (CFStringRef)@"!$&'()*+,-./:;=?@_~%#[]",
-                                                                                                     NULL,
-                                                                                                     kCFStringEncodingUTF8));
-    return encodedString;
-    
+    NSString *charactersToEscape = @"?!@#$^&%*+,:;='\"`<>()[]{}/\\| ";
+    NSCharacterSet *allowedCharacters = [[NSCharacterSet characterSetWithCharactersInString:charactersToEscape] invertedSet];
+    NSString *encodedUrl = [self stringByAddingPercentEncodingWithAllowedCharacters:allowedCharacters];
+    return encodedUrl;
 }
 
 
@@ -37,9 +51,10 @@
 + (NSString *)BGNet_paramString:(NSDictionary *)dic
 {
     NSMutableArray *array = [NSMutableArray array];
-    for (NSString *key in dic) {
+    for (NSString *key in dic)
+    {
         NSString *value = [dic objectForKey:key];
-        [array addObject:[NSString stringWithFormat:@"%@=%@", key, value]];
+        [array addObject:[NSString stringWithFormat:@"%@=%@", [key BGNet_paramEncoding], [value BGNet_paramEncoding]]];
     }
     return [array componentsJoinedByString:@"&"];
 }

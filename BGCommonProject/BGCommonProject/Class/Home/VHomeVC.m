@@ -10,11 +10,13 @@
 #import "NSStringVerificationVC.h"
 #import "BGGCDTimerVC.h"
 #import "ViewFrameVC.h"
+#import "BGNetWorkingVC.h"
 
 @interface VHomeVC ()<UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) NSArray *dataAry;
+@property (nonatomic, strong) NSArray *vcAry;
 
 @end
 
@@ -50,10 +52,25 @@
         _dataAry = @[
                      @"字符串验证",
                      @"计时器",
-                     @"UIView+Frame"
+                     @"UIView+Frame",
+                     @"网络请求"
                      ];
     }
     return _dataAry;
+}
+
+-(NSArray *)vcAry
+{
+    if (!_vcAry)
+    {
+        _vcAry = @[
+                     [[NSStringVerificationVC alloc] init],
+                     [[BGGCDTimerVC alloc] init],
+                     [[ViewFrameVC alloc] init],
+                     [[BGNetWorkingVC alloc] init]
+                     ];
+    }
+    return _vcAry;
 }
 
 
@@ -113,7 +130,28 @@
             break;
         case 3:
         {
-            BGGCDTimerVC *vc = [[BGGCDTimerVC alloc] init];
+            BGNetWorkingVC *vc = [[BGNetWorkingVC alloc] init];
+            vc.hidesBottomBarWhenPushed = YES;
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+            break;
+        case 4:
+        {
+            BGNetWorkingVC *vc = [[BGNetWorkingVC alloc] init];
+            vc.hidesBottomBarWhenPushed = YES;
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+            break;
+        case 5:
+        {
+            BGNetWorkingVC *vc = [[BGNetWorkingVC alloc] init];
+            vc.hidesBottomBarWhenPushed = YES;
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+            break;
+        case 6:
+        {
+            BGNetWorkingVC *vc = [[BGNetWorkingVC alloc] init];
             vc.hidesBottomBarWhenPushed = YES;
             [self.navigationController pushViewController:vc animated:YES];
         }

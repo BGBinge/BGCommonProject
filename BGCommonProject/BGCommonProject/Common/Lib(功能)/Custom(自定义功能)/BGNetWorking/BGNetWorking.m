@@ -100,7 +100,7 @@
     {
         // 参数配置
         NSString *urlStr = [NSString stringWithFormat:@"%@?%@",[URL absoluteString],[NSString BGNet_paramString:param]];
-        URL = [[NSURL alloc] initWithString:[urlStr BGNet_urlEncoding]];
+        URL = [[NSURL alloc] initWithString:urlStr];
         request = [NSMutableURLRequest requestWithURL:URL];
         [request setHTTPMethod:@"GET"];
         
@@ -122,7 +122,7 @@
     
     // 创建会话任务
     NSURLSessionDataTask *task = [session dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
-        completeBlock(data, nil);
+        completeBlock(data, error);
     }];
     // 执行任务
     [task resume];

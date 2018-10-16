@@ -10,7 +10,7 @@
 #import "NSString+BGNetWorking.h"
 
 
-typedef void (^CompleteBlock)(NSData *obj,id error);
+typedef void (^CompleteBlock)(NSData *obj, NSError *error);
 
 typedef NS_ENUM(NSInteger, BGRequestType)
 {

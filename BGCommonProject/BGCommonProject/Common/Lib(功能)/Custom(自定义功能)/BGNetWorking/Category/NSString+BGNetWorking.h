@@ -16,7 +16,16 @@
 
  @return 编码后的字符串
  */
--(NSString *)BGNet_urlEncoding;
+/* -(NSString *)BGNet_urlEncoding;*/
+
+
+/**
+参数字典中汉字与特殊字符处理
+
+ @return 编码后的字符串
+ */
+-(NSString *)BGNet_paramEncoding;
+
 
 
 /**

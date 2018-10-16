@@ -17,24 +17,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    
-    NSURL *url = [NSURL URLWithString:@"https://www.apiopen.top/weatherApi"];
-    NSDictionary *parametersDict = @{
-                                     @"city": @"成都"
-                                     };
-    
-    [BGNetWorking BG_postRequestWithURL:url param:parametersDict completeBlock:^(NSData *obj, id error) {
-        if (error)
-        {
-            NSError *er = (NSError *)error;
-            NSLog(@"error: %@",er.localizedDescription);
-        }
-        else
-        {
-            NSString *str = [[NSString alloc] initWithData:obj encoding:NSUTF8StringEncoding];
-            NSLog(@"data: %@",str);
-        }
-    }];
 
     // Do any additional setup after loading the view.
 }
