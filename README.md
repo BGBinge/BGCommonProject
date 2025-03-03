@@ -5,7 +5,6 @@
 ## **分类**
 ### NSString
 * 字符串验证
-*  
 
 ## **功能以及控件**
 ### BGTabBarController
